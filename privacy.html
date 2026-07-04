@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cairn — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 42rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: #23271f; background: #faf7f1; }
+  @media (prefers-color-scheme: dark) { body { color: #ece6d8; background: #1c1b15; } a { color: #78c8b0; } }
+  h1 { font-size: 1.8rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.15rem; margin: 1.8rem 0 .4rem; }
+  .meta { color: #6f6858; font-size: .95rem; }
+  @media (prefers-color-scheme: dark) { .meta { color: #978e7a; } }
+  a { color: #2f6a57; }
+  ul { padding-left: 1.2rem; }
+  li { margin: .3rem 0; }
+  .top { font-size: .95rem; }
+</style>
+</head>
+<body>
+  <p class="top"><a href="index.html">← Cairn Support</a></p>
+  <h1>Cairn — Privacy Policy</h1>
+  <p class="meta"><strong>Effective date:</strong> 2026-07-03 &middot; <strong>Publisher:</strong> Backshear LLC</p>
+
+  <p>Cairn is a private, offline reflective journal for medical students. This policy explains what the app does
+  and does not do with your information. In short: <strong>Cairn collects nothing, sends nothing, and stores
+  everything encrypted on your device.</strong></p>
+
+  <h2>What we collect</h2>
+  <p><strong>Nothing.</strong> Cairn has no analytics, no accounts, no advertising, and no third-party SDKs.
+  Backshear LLC receives no data from your use of the app — we cannot see your journal, your usage, your device,
+  or anything else.</p>
+
+  <h2>What the app stores, and where</h2>
+  <p>Everything you write stays <strong>on your device only</strong>, inside an encrypted vault:</p>
+  <ul>
+    <li>Your entries are encrypted with a key derived from your passphrase (PBKDF2-HMAC-SHA256, 600,000 iterations)
+      and a random 256-bit master key, using AES-GCM-256. The vault uses iOS Complete File Protection and is
+      <strong>excluded from iCloud and device backups</strong>.</li>
+    <li>If you turn on <strong>Face ID / Touch ID unlock</strong>, the key that unlocks your journal is wrapped by a
+      non-exportable key held in this device’s <strong>Secure Enclave</strong>; it never leaves the device.</li>
+    <li>A <strong>recovery key</strong> (which you save yourself, off-device) can also open the vault if you forget
+      your passphrase. Cairn never stores your recovery key.</li>
+    <li>An optional, non-secret <strong>passphrase hint</strong> is stored in the clear so it can appear on the lock
+      screen. Do not put anything sensitive in it.</li>
+    <li>An optional <strong>username</strong> you may set is a display-only label for your device’s sign-in / passkey
+      prompt. It is stored on your device, is never treated as patient data, and is never included in any export.</li>
+  </ul>
+  <p>Backups and exports you create are written <strong>only where you choose</strong> (e.g., the Files app or a
+  share-sheet destination you pick). Encrypted backups remain encrypted; de-identified text/PDF exports are produced
+  locally.</p>
+
+  <h2>Microphone &amp; speech (optional dictation)</h2>
+  <p>If you choose to dictate a note, Cairn uses the microphone and Apple’s on-device speech recognition, which is
+  <strong>forced to run entirely on your device</strong>. Audio is transcribed locally and is <strong>never sent to
+  Apple or any server</strong>, and the audio itself is discarded — only the text you keep is saved, encrypted, in
+  your journal. Permission is requested only the first time you tap to dictate.</p>
+
+  <h2>Network use</h2>
+  <p><strong>None.</strong> Cairn makes zero network requests. This is enforced structurally by a Content Security
+  Policy (<code>connect-src 'none'</code>) and by a navigation guard in the app shell. You can confirm it yourself
+  by turning on Airplane Mode — the app works fully.</p>
+
+  <h2>Protected Health Information (PHI)</h2>
+  <p>Cairn is designed to hold <strong>no patient identifiers</strong>. The data model never asks for names, dates
+  of birth, record numbers, addresses, phone numbers, emails, photos, or provider names; ages are recorded only as
+  broad bands, and encounters carry no calendar dates. A built-in check assists you in catching identifiers, but it
+  is an assist, not a guarantee — <strong>you are responsible for keeping your entries de-identified</strong> and for
+  following your school’s and hospital’s policies, which may be stricter than the law. Cairn is not a covered
+  entity’s system and is not, by itself, “HIPAA compliant”; HIPAA compliance is a property of an organization’s
+  program, not of an app.</p>
+
+  <h2>Children</h2>
+  <p>Cairn is intended for adult medical students and is not directed to children.</p>
+
+  <h2>Data deletion</h2>
+  <p>You can erase all data at any time from <strong>Settings → Erase all data on this device</strong>. Because
+  nothing is stored off-device, deleting the app (and any backups you made) removes your data entirely.</p>
+
+  <h2>Your responsibility &amp; disclaimer</h2>
+  <p>Cairn is a personal reflective journal — not an electronic health record, not clinical decision support, and
+  not a substitute for any patient-encounter log your institution requires. It is provided “as is,” without
+  warranty. To the fullest extent permitted by law, Backshear LLC is not liable for any loss or disclosure of
+  information you choose to enter or export.</p>
+
+  <h2>Changes</h2>
+  <p>We may update this policy as the app evolves. Material changes will be reflected by an updated effective date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: <a href="https://github.com/lostnumber07/cairn-support/issues">open an issue</a>
+  &middot; Backshear LLC.</p>
+</body>
+</html>
