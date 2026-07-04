@@ -59,9 +59,23 @@
   your journal. Permission is requested only the first time you tap to dictate.</p>
 
   <h2>Network use</h2>
-  <p><strong>None.</strong> Cairn makes zero network requests. This is enforced structurally by a Content Security
-  Policy (<code>connect-src 'none'</code>) and by a navigation guard in the app shell. You can confirm it yourself
-  by turning on Airplane Mode — the app works fully.</p>
+  <p><strong>None by default.</strong> Out of the box, Cairn makes zero network requests — enforced structurally
+  by a Content Security Policy (<code>connect-src 'none'</code>) and a navigation guard in the app shell. You can
+  confirm it by turning on Airplane Mode; the app works fully.</p>
+
+  <h2>iCloud sync (optional, off by default)</h2>
+  <p>Cairn offers an <strong>optional</strong> iCloud sync you can turn on in <strong>Settings → iCloud sync</strong>.
+  When it&rsquo;s on:</p>
+  <ul>
+    <li>Your journal syncs across <strong>your own Apple devices</strong> through <strong>your</strong> iCloud
+      account (Apple&rsquo;s CloudKit <strong>private</strong> database). We operate no server and never receive your data.</li>
+    <li>Only the <strong>already-encrypted</strong> vault is synced. Your entries are encrypted on your device with a
+      key derived from your passphrase, which <strong>never leaves your devices</strong> — so Apple (and Backshear)
+      only ever hold opaque ciphertext and <strong>cannot read your journal</strong>.</li>
+    <li>Use the <strong>same passphrase</strong> on each device. If you edit the same journal on two devices while
+      offline, the most recent save wins (there is no per-entry merge).</li>
+    <li>Turning sync <strong>off</strong> returns the app to fully offline. This is the only feature that uses the network.</li>
+  </ul>
 
   <h2>Protected Health Information (PHI)</h2>
   <p>Cairn is designed to hold <strong>no patient identifiers</strong>. The data model never asks for names, dates
