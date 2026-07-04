@@ -72,8 +72,9 @@
     <li>Only the <strong>already-encrypted</strong> vault is synced. Your entries are encrypted on your device with a
       key derived from your passphrase, which <strong>never leaves your devices</strong> — so Apple (and Backshear)
       only ever hold opaque ciphertext and <strong>cannot read your journal</strong>.</li>
-    <li>Use the <strong>same passphrase</strong> on each device. If you edit the same journal on two devices while
-      offline, the most recent save wins (there is no per-entry merge).</li>
+    <li>Use the <strong>same passphrase</strong> on each device. Your entries <strong>merge</strong> across devices
+      — nothing is dropped. If you edit the <em>same entry</em> on two devices while both are offline, the later
+      edit of that entry wins.</li>
     <li>Turning sync <strong>off</strong> returns the app to fully offline. This is the only feature that uses the network.</li>
   </ul>
 
