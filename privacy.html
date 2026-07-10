@@ -38,7 +38,9 @@
   <ul>
     <li>Your entries are encrypted with a key derived from your passphrase (PBKDF2-HMAC-SHA256, 600,000 iterations)
       and a random 256-bit master key, using AES-GCM-256. The vault uses iOS Complete File Protection and is
-      <strong>excluded from iCloud and device backups</strong>.</li>
+      <strong>excluded from device backups</strong>. It reaches iCloud <strong>only</strong> if you turn on the
+      optional iCloud sync described below &mdash; and then only as the already-encrypted vault, which Apple
+      cannot read.</li>
     <li>If you turn on <strong>Face ID / Touch ID unlock</strong>, the key that unlocks your journal is wrapped by a
       non-exportable key held in this device’s <strong>Secure Enclave</strong>; it never leaves the device.</li>
     <li>A <strong>recovery key</strong> (which you save yourself, off-device) can also open the vault if you forget
