@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Addendum — Release checksums</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: #23271f; background: #faf7f1; }
+  @media (prefers-color-scheme: dark) { body { color: #ece6d8; background: #1c1b15; } a { color: #78c8b0; } }
+  h1 { font-size: 1.8rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.15rem; margin: 1.8rem 0 .4rem; }
+  a { color: #2f6a57; }
+  code, .sha { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85em; }
+  .sha { word-break: break-all; }
+  table { border-collapse: collapse; width: 100%; margin-top: .5rem; }
+  th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid rgba(120,110,90,.35); vertical-align: top; }
+  th { font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; color: #6f6858; }
+  @media (prefers-color-scheme: dark) { th { color: #978e7a; } }
+  pre { background: rgba(120,110,90,.12); padding: .7rem .9rem; border-radius: .5rem; overflow-x: auto; }
+  .top { font-size: .95rem; }
+</style>
+</head>
+<body>
+  <p class="top"><a href="index.html">&larr; Addendum Support</a></p>
+  <h1>Addendum — Release checksums</h1>
+
+  <p>Addendum ships as <strong>one auditable HTML file</strong>. To confirm the copy you are running is exactly
+  the code that was published, hash your copy and compare it to the table below. The in-app
+  <strong>Settings &rarr; Privacy you can verify</strong> screen walks through this and also shows the live
+  Content-Security-Policy (<code>connect-src 'none'</code>) that structurally blocks all network access.</p>
+
+  <h2>How to check</h2>
+  <p>On a Mac or Linux computer, in a terminal:</p>
+  <pre>shasum -a 256 index.html</pre>
+  <p>The output must match the SHA-256 for your version exactly. (The same table is recorded as
+  <code>RELEASE-MANIFEST.md</code> alongside the source.)</p>
+
+  <h2>Published releases</h2>
+  <table>
+    <tr><th>Version</th><th>Schema</th><th>index.html bytes</th><th>SHA-256</th><th>Date (UTC)</th></tr>
+    <tr>
+      <td>2.5.0</td>
+      <td>9</td>
+      <td>543,219</td>
+      <td class="sha">9cfaea226c977521cb38af7d28e792682b22c8aca7e7f7f1f37d259ad4488e07</td>
+      <td>2026-07-11</td>
+    </tr>
+  </table>
+
+  <p>Earlier versions (Cairn-era) predate this page; their checksums were not published.</p>
+
+  <h2>Contact</h2>
+  <p>Questions: <a href="https://github.com/lostnumber07/cairn-support/issues">open an issue</a> &middot; Backshear LLC.</p>
+</body>
+</html>
